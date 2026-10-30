@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    background-image: radial-gradient(at 0% 0%, #1e1b4b 0px, transparent 50%), radial-gradient(at 100% 100%, #0369a1 0px, transparent 50%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.weather-wrapper {
+    max-width: 550px;
+    width: 100%;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 2.2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.app-header h2 {
+    font-size: 1.8rem;
+}
+
+.app-header h2 span {
+    color: #38bdf8;
+}
+
+.app-header p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #334155;
+}
+
+.search-bar i {
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0.7rem;
+    color: #f8fafc;
+    font-size: 0.95rem;
+}
+
+.search-bar button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #0369a1;
+}
+
+#geo-btn {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    padding: 0.7rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-msg {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #38bdf8;
+    min-height: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.weather-card {
+    text-align: center;
+}
+
+.city-info h1 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.city-info p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.main-weather {
+    margin: 1.5rem 0;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    color: #facc15;
+    margin-bottom: 0.5rem;
+}
+
+.temperature {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.temperature .unit {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    vertical-align: top;
+}
+
+#weather-desc {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-top: 0.4rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.detail-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: left;
+}
+
+.detail-card i {
+    font-size: 1.5rem;
+    color: #38bdf8;
+}
+
+.detail-card .label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    display: block;
+}
+
+.detail-card h4 {
+    font-size: 1rem;
+}
+
+.forecast-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.forecast-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.forecast-card {
+    flex: 1;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.forecast-card i {
+    font-size: 1.4rem;
+    color: #38bdf8;
+}
+
+.forecast-card p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.forecast-card span {
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+}
