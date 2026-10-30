@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyPulse | Real-Time Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="weather-wrapper">
+        <header class="app-header">
+            <h2>SkyPulse <span>Weather</span></h2>
+            <p>Live forecasts & meteorological updates</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="city-input" placeholder="Search city (e.g. Chennai, Trichy)...">
+                <button id="search-btn">Search</button>
+            </div>
+            <button id="geo-btn" title="Use current location">
+                <i class="fa-solid fa-location-crosshairs"></i> Detect Location
+            </button>
+        </div>
+
+        <div id="status-msg" class="status-msg"></div>
+
+        <div class="weather-card" id="weather-display">
+            <div class="city-info">
+                <h1 id="city-name">Chennai</h1>
+                <p id="current-date">Today</p>
+            </div>
+
+            <div class="main-weather">
+                <i class="fa-solid fa-cloud-sun weather-icon" id="weather-icon"></i>
+                <div class="temperature">
+                    <span id="temp-val">31</span><span class="unit">°C</span>
+                </div>
+                <p id="weather-desc">Partly Cloudy</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <span class="label">Humidity</span>
+                        <h4 id="humidity">72%</h4>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <span class="label">Wind Speed</span>
+                        <h4 id="wind-speed">18 km/h</h4>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <div>
+                        <span class="label">Feels Like</span>
+                        <h4 id="feels-like">35°C</h4>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <div>
+                        <span class="label">Pressure</span>
+                        <h4 id="pressure">1012 hPa</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>Upcoming Forecast</h3>
+                <div class="forecast-cards" id="forecast-container">
+                    <div class="forecast-card">
+                        <p>Tomorrow</p>
+                        <i class="fa-solid fa-sun"></i>
+                        <span>33°C</span>
+                    </div>
+                    <div class="forecast-card">
+                        <p>Sat</p>
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <span>29°C</span>
+                    </div>
+                    <div class="forecast-card">
+                        <p>Sun</p>
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>28°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built for Slash Mark IT Solutions Internship Task</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
